@@ -1,4 +1,132 @@
 .home {
-  background: #000;
-  color: #af3434;
+  min-height: 800px;
+  position: relative; //позиция - родственник
+  outline: 1px solid red; //временно добавили в рамках разработки
+  &__img,
+  &__video {
+    width: 100%;
+    height: 100%;
+    position: absolute; //картинка не должна выталкивать текст
+    object-fit: cover; //чтоб картинка растягивалась
+  }
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  //делаем на фоновую картинку фильтр с помощью псевдо элемента
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.7) 100%);
+  }
+}
+.top-menu__list {
+  @include flex(center, center);
+}
+.top-menu__item {
+  margin: 0 5px;
+  a {
+    text-transform: uppercase; //верхний регистр
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+    display: block; //задали для того, чтоб сделать отступы на не блочных элементах
+    padding: 44px 24px;
+    transition: 0.3s;
+    border-top: 5px solid transparent;
+    &:hover {
+      color: $yellow;
+      border-top: 5px solid $yellow;
+    }
+  }
+}
+.logo {
+  margin: 0px 70px;
+  img {
+    position: relative;
+    top: 15px;
+  }
+}
+.home__container-center {
+  @include flex(space-between, flex-start);
+  margin-top: 175px;
+}
+.socials {
+  width: 62px;
+  margin-top: 40px;
+  a {
+    display: block;
+    height: 62px;
+    border-radius: 50%;
+    transition: 0.3s;
+    margin-bottom: 20px;
+    &:hover {
+      background: $yellow;
+    }
+  }
+}
+.home__text {
+  text-align: center;
+  h6 {
+    color: $white;
+    font-size: $text;
+    margin-bottom: 8px;
+  }
+  h1 {
+    color: $yellow;
+    font-family: $kurale;
+    font-size: 72px;
+    font-weight: normal;
+    margin-bottom: 57px;
+    &::after {
+      @include line;
+    }
+  }
+}
+.home__btns {
+  margin-bottom: 82px;
+  a {
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    line-height: 60px; //чтобы текст находился по центру кнопки
+    color: $white;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+    text-transform: uppercase;
+    border: 1px solid $white-opacity;
+    margin: 0 20px 20px;
+    &:hover {
+      background: $yellow;
+    }
+  }
+  .btn-order {
+    background: $yellow;
+    border: none;
+    &:hover {
+      background: darken($yellow, 10%);
+    }
+  }
+}
+.arrow__about {
+  display: block;
+  width: 62px;
+  height: 62px;
+  margin: $mc;
+}
+.time-work {
+  font-weight: 700;
+  font-size: 12px;
+  color: $white;
+  transform: rotate(-90deg);
+  margin-top: 130px;
+  margin-left: -75px;
 }

@@ -13,41 +13,67 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <a href="#">
-      <svg>
-        <use xlink:href="img/sprite-icons.svg#facebook"></use>
-      </svg>
-    </a>
-    <a href="#">
-      <svg>
-        <use xlink:href="img/sprite-icons.svg#twitter"></use>
-      </svg>
-    </a>
-    <a href="#">
-      <svg>
-        <use xlink:href="img/sprite-icons.svg#instagram"></use>
-      </svg>
-    </a>
-    <a href="#">
-      <svg>
-        <use xlink:href="img/sprite-icons.svg#down-btn"></use>
-      </svg>
-    </a>
-    <a href="#">
-      <svg>
-        <use xlink:href="img/sprite-icons.svg#map"></use>
-      </svg>
-    </a>
-    <a href="#">
-      <svg>
-        <use xlink:href="img/sprite-icons.svg#phone"></use>
-      </svg>
-    </a>
-    <a href="#">
-      <svg>
-        <use xlink:href="img/sprite-icons.svg#email"></use>
-      </svg>
-    </a>
+    <div class="wrapper">
+      <section class="home">
+        <!-- <img class="home__img" src="img/dish.jpg" alt="" /> -->
+        <video
+          class="home__video"
+          src="img/dish.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <div class="home__container">
+          <div class="container">
+            <nav class="top-menu">
+              <ul class="top-menu__list">
+                <li class="top-menu__item"><a href="#about">О РЕСТОРАНЕ</a></li>
+                <li class="top-menu__item"><a href="#team">КОМАНДА</a></li>
+                <li class="top-menu__item"><a href="#order">ЗАКАЗАТЬ</a></li>
+                <li class="logo">,<img src="img/logo.png" alt="" /></li>
+                <li class="top-menu__item"><a href="#menu">МЕНЮ</a></li>
+                <li class="top-menu__item"><a href="#events">СОБЫТИЯ</a></li>
+                <li class="top-menu__item"><a href="#contacts">КОНТАКТЫ</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="container home__container-center">
+            <div class="time-work">Пн - Пт: 8 - 22, Сб - Вс: 9 - 24</div>
+            <div class="home__text">
+              <h6>РЕСТОРАН</h6>
+              <h1>GOLDEN EGG</h1>
+              <div class="home__btns">
+                <a href="#order" class="btn-order">Заказать столик</a>
+                <a href="#about" class="btn-about">О ресторане</a>
+              </div>
+              <a href="#about" class="arrow__about">
+                <svg>
+                  <use xlink:href="img/sprite-icons.svg#arrow"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="socials">
+              <a href="#" target="_blank">
+                <svg>
+                  <use xlink:href="img/sprite-icons.svg#facebook"></use>
+                </svg>
+              </a>
+              <a href="#" target="_blank">
+                <svg>
+                  <use xlink:href="img/sprite-icons.svg#twitter"></use>
+                </svg>
+              </a>
+              <a href="#" target="_blank">
+                <svg>
+                  <use xlink:href="img/sprite-icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--end wrapper-->
     <script src="js/swiper.min.js"></script>
   </body>
 </html>
