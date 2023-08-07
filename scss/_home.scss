@@ -1,7 +1,7 @@
 .home {
   min-height: 800px;
   position: relative; //позиция - родственник
-  outline: 1px solid red; //временно добавили в рамках разработки
+
   &__img,
   &__video {
     width: 100%;
@@ -126,7 +126,8 @@
   font-weight: 700;
   font-size: 12px;
   color: $white;
-  transform: rotate(-90deg);
-  margin-top: 130px;
-  margin-left: -75px;
+  width: 60px;
+  margin-top: 60px;
+  writing-mode: vertical-rl; //режим письма: вертикальный
+  transform: rotate(180deg);
 }
