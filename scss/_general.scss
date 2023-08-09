@@ -7,8 +7,10 @@ $wrap: 1440px;
 $container: 1230px;
 $mc: 0 auto;
 $yellow: #e8c300;
+$gray: #e5e5e5;
 $white-opacity: rgba(255, 255, 255, 0.5);
 $black-opacity: rgba(0, 0, 0, 0.5);
+$gray-opacity: rgba(51, 51, 51, 0.5);
 
 @mixin flex($jc, $ai) {
   display: flex;
