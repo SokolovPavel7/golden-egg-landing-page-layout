@@ -1,0 +1,102 @@
+.order {
+  padding: 100px 0 45px;
+}
+.order__container {
+  @include flex(space-between, center);
+}
+.order__text {
+  width: 50%;
+  max-width: 565px;
+  text-align: center;
+}
+.order-form {
+  @include flex(space-between, center);
+  input {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: $gray;
+    border: 1px solid transparent;
+    outline: none;
+    height: 60px;
+    padding: 0 20px;
+    font-size: 14px;
+    &::placeholder {
+      color: $gray-opacity;
+    }
+    &:focus {
+      border: 1px solid $yellow;
+    }
+  }
+  .order__select {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 14px;
+      height: 9px;
+      background: url(../img/select-arrow.svg) center no-repeat;
+      position: absolute;
+      right: 10px;
+      top: calc(50% - 5px);
+      pointer-events: none; //чтобы svg не было событием мыши, чтобы меню открывалось при нажатии на стрелку
+    }
+    select {
+      width: 100%;
+      background: $gray;
+      border: 1px solid transparent;
+      height: 60px;
+      border-radius: 5px;
+      padding: 0 20px;
+      font-size: 14px;
+      outline: none;
+      appearance: none; //убираем стандартную стрелку
+      //Если селект не валидный, то цвет $gray-opacity
+      &:not(:valid) {
+        color: $gray-opacity;
+      }
+    }
+    option {
+      color: $color;
+    }
+  }
+  button {
+    width: 100%;
+    height: 60px;
+    background: $yellow;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    color: $white;
+    &:hover {
+      background: darken($yellow, 10%);
+    }
+    transition: 0.3s;
+  }
+}
+.order__img {
+  width: 50%;
+  max-width: 500px;
+  position: relative;
+  .circle {
+    right: 0;
+    transform: translate(40%, -50%);
+  }
+  img {
+    @include img;
+  }
+}
+.order__contacts {
+  font-size: 12px;
+  line-height: 12px;
+  color: $gray-opacity;
+  text-align: center;
+  padding-top: 45px;
+  a {
+    color: $gray-opacity;
+    font-weight: 700;
+  }
+}
