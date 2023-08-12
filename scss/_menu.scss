@@ -1,0 +1,145 @@
+.menu {
+  padding: 70px 0 75px;
+  h2 {
+    text-align: center;
+  }
+  &__intro {
+    max-width: 565px;
+    margin: $mc;
+    text-align: center;
+  }
+}
+.tabs__container {
+  margin: 45px auto 55px;
+  position: relative;
+  height: 60px;
+  max-width: $container;
+  //добавляем скролл:
+  overflow-y: hidden; //переполнение-y: скрыто
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    height: 8px;
+    background: $tabs; //цвет скролла
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $yellow; //цвет бегунка
+  }
+}
+.tabs {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  @include flex(center, center);
+  flex-wrap: nowrap;
+  &__item {
+    min-width: 163px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: 0.3s;
+    font-size: 12px;
+    font-weight: bold;
+    color: $tabs;
+    height: 47px;
+    @include flex(center, center);
+    border-right: 1px solid $tabs-opacity;
+    &:hover,
+    &.active {
+      background: $yellow;
+    }
+    &:last-child {
+      border: none;
+    }
+  }
+  &.overflow {
+    //если у нашего tabs будет класс overflow, то применить:
+    left: 0;
+    transform: none;
+  }
+}
+
+//Стили для слайдов
+.menu__sliders {
+  position: relative;
+  max-width: 1400px;
+  margin: $mc;
+  overflow: hidden; //переполнение: скрыто
+  height: 460px;
+}
+.menu__slider {
+  height: 100%;
+}
+.menu__slider-block {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0; //не прозрачный
+  transition: 1s;
+  &.show {
+    opacity: 1;
+    z-index: 2;
+  }
+}
+.menu__item {
+  max-width: 500px;
+  @include flex(space-between, center);
+  &-img {
+    width: 251px;
+    height: 167px;
+    object-fit: cover; //чтоб картинку не сплющило, а подогнало под размеры
+    border: 4px solid $yellow;
+  }
+  &-text {
+    max-width: 220px;
+    margin-left: 25px;
+  }
+}
+.menu__title,
+.menu__price {
+  font-family: $kurale;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: $tabs;
+  font-weight: 400;
+}
+.menu__title {
+  display: inline-block;
+  border-bottom: 1px solid $tabs;
+}
+.menu__desc {
+  font-size: 12px;
+  line-height: 14px;
+  color: $gray-opacity;
+  margin-top: 24px;
+}
+.menu__slider .swiper-slide {
+  height: 175px;
+  margin-bottom: 55px;
+  display: flex;
+  justify-content: center;
+}
+.menu__pagination {
+  @include flex(center, center);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $gray-opacity;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.3s;
+    &:hover {
+      background: $yellow;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background: $yellow;
+  }
+}
+.wrapper__slider {
+  flex-wrap: wrap;
+}

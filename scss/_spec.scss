@@ -39,7 +39,7 @@
     @include img;
   }
 }
-.swiper-pagination {
+.spec__pagination {
   @include flex(center, center);
   position: relative;
   width: 100%;
