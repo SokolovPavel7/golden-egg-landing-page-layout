@@ -21,3 +21,15 @@
   @include flex(center, center);
   }
 - видео для лендинга взято с сайта https://pixabay.com/
+- настройки плагина sass
+  "liveSassCompile.settings.autoprefix": [],
+  "liveSassCompile.settings.formats": [
+  {
+  "format": "compressed",
+  "extensionName": ".min.css",
+  "savePath": "/css/"
+  }
+  ],
+  "files.exclude": {
+  ".vscode": true
+  }
