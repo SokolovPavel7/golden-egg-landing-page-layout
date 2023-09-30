@@ -1,0 +1,12 @@
+.footer {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    height: 60px;
+    padding: 20px;
+    color: $white-opacity;
+    font-size: 12px;
+    a {
+      font-weight: bold;
+      color: $white-opacity;
+    }
+  }
